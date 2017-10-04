@@ -1,0 +1,20 @@
+{
+  "name": "promise-throttler",
+  "version": "1.0.0",
+  "description": "throttle promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/daniel-lundin/promise-throttler"
+  },
+  "keywords": [
+    "promise",
+    "throttler",
+    "queue"
+  ],
+  "author": "d-dog@d-dog.se",
+  "license": "MIT"
+}

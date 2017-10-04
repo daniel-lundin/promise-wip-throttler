@@ -17,7 +17,13 @@
   "devDependencies": {
     "rollup": "^0.50.0"
   },
+  "files": [
+    "index.js",
+    "bundle.js",
+    "README.md"
+  ],
   "scripts": {
-    "build": "rollup -f cjs index.js -o main.js"
+    "build": "rollup -f cjs index.js -o bundle.js",
+    "prepublish": "npm run build"
   }
 }

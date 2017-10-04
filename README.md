@@ -6,8 +6,8 @@ Set a WIP(work in progress) limit for your promises.
 
 ## Example use cases
 
- - Make sure to not over load an external service
- - Limit memory heavy and/or CPU intensive tasks
+ - Make sure to not overload an external service.
+ - Limit the number of concurrent memory heavy and/or CPU intensive tasks.
 
 ## Usage
 

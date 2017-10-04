@@ -1,11 +1,11 @@
 {
   "name": "promise-wip-throttler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "throttle promises",
   "main": "bundle.js",
   "repository": {
     "type": "git",
-    "url": "github.com/daniel-lundin/promise-wip-throttler"
+    "url": "https://github.com/daniel-lundin/promise-wip-throttler.git"
   },
   "keywords": [
     "promise",

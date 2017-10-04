@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "throttle promises",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "github.com/daniel-lundin/promise-wip-throttler"
@@ -16,5 +13,11 @@
     "wip"
   ],
   "author": "d-dog@d-dog.se",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.50.0"
+  },
+  "scripts": {
+    "build": "rollup -f cjs index.js -o main.js"
+  }
 }

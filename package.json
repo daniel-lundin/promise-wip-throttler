@@ -1,5 +1,5 @@
 {
-  "name": "promise-throttler",
+  "name": "promise-wip-throttler",
   "version": "1.0.0",
   "description": "throttle promises",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/daniel-lundin/promise-throttler"
+    "url": "github.com/daniel-lundin/promise-wip-throttler"
   },
   "keywords": [
     "promise",
     "throttler",
-    "queue"
+    "wip"
   ],
   "author": "d-dog@d-dog.se",
   "license": "MIT"

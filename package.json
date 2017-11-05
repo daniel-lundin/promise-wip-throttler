@@ -1,6 +1,6 @@
 {
   "name": "promise-wip-throttler",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "throttle promises",
   "main": "index.js",
   "repository": {

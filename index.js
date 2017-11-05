@@ -1,4 +1,4 @@
-export default function createThrottler(length) {
+function createThrottler(length) {
   const promises = Array.from({ length }).map((_, index) => Promise.resolve(index));
   let completetionPromise = Promise.resolve();
 
@@ -13,3 +13,17 @@ export default function createThrottler(length) {
     );
   };
 }
+
+function throttled(length) {
+  const throttler = createThrottler(length);
+  return (fn) => {
+    return (...args) => {
+      throttler(() => fn(...args));
+    }
+  }
+}
+
+module.exports = {
+  createThrottler,
+  throttled
+};

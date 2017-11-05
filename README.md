@@ -16,7 +16,7 @@ The third one will not be started until one of the first two resolves.
 
 ```js
 
-import createThrottler from 'promise-wip-throttler';
+import { createThrottler } from 'promise-wip-throttler';
 
 const throttler = createThrottler(2);
 
@@ -27,6 +27,32 @@ throttler(() => heavyOperation());
 throttler(() => heavyOperation());
 throttler(() => heavyOperation());
 throttler(() => heavyOperation());
+```
+
+
+## Decorator
+
+The throttled is also available as a higher order function that can wraps the target function:
+
+```js
+
+import { throttled } from 'promise-wip-throttler';
+
+
+function mySlowFunction() {
+ // Heavy lifting, retuns a promise
+}
+
+const myThrottledSlowFunction = throttled(1)(mySlowFunction);
+
+// Will only run one at a time
+myThrottledSlowFunction();
+myThrottledSlowFunction();
+myThrottledSlowFunction();
+myThrottledSlowFunction();
+myThrottledSlowFunction();
+
+
 ```
 
 ## License

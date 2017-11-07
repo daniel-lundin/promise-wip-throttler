@@ -30,7 +30,6 @@ throttler(() => heavyOperation());
 throttler(() => heavyOperation());
 ```
 
-
 ## Decorator
 
 The throttler is also available as a higher order function that can wraps the target function. The throttled function returns a promise that will resolve once the function has finished executing.

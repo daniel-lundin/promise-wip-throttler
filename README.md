@@ -32,7 +32,7 @@ throttler(() => heavyOperation());
 
 ## Decorator
 
-The throttled is also available as a higher order function that can wraps the target function:
+The throttler is also available as a higher order function that can wraps the target function. The throttled function returns a promise that will resolve once the function has finished executing.
 
 ```js
 
@@ -46,12 +46,12 @@ function mySlowFunction() {
 const myThrottledSlowFunction = throttled(1)(mySlowFunction);
 
 // Will only run one at a time
-myThrottledSlowFunction();
-myThrottledSlowFunction();
-myThrottledSlowFunction();
-myThrottledSlowFunction();
-myThrottledSlowFunction();
-
+myThrottledSlowFunction().then(() => { console.log('I\'m done'); });
+myThrottledSlowFunction().then(() => { console.log('I\'m done'); });
+myThrottledSlowFunction().then(() => { console.log('I\'m done'); });
+myThrottledSlowFunction().then(() => { console.log('I\'m done'); });
+myThrottledSlowFunction().then(() => { console.log('I\'m done'); });
+myThrottledSlowFunction().then(() => { console.log('I\'m done'); });
 
 ```
 

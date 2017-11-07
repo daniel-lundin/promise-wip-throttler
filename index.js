@@ -16,11 +16,10 @@ function createThrottler(length) {
 
 function throttled(length) {
   const throttler = createThrottler(length);
-  return (fn) => {
-    return (...args) => {
-      throttler(() => fn(...args));
-    }
-  }
+  return (fn) => (...args) =>
+    new Promise((resolve, reject) => {
+      throttler(() => fn(...args).then(resolve, reject));
+    });
 }
 
 module.exports = {

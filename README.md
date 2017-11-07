@@ -1,4 +1,5 @@
 # promise-wip-throttler
+[![Build Status](https://travis-ci.org/daniel-lundin/promise-wip-throttler.svg?branch=master)](https://travis-ci.org/daniel-lundin/promise-wip-throttler)
 
 Set a WIP(work in progress) limit for your promises.
 

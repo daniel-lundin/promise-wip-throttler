@@ -3,15 +3,17 @@ function createThrottler(length) {
   let completetionPromise = Promise.resolve();
 
   return (factory) => {
-    completetionPromise = completetionPromise.then(() =>
-      Promise.race(promises)
+    return new Promise((resolve, reject) => {
+      completetionPromise = completetionPromise.then(() =>
+        Promise.race(promises)
         .then((index) => {
           promises[index] = factory()
-            .then(() => Promise.resolve(index))
-            .catch(() => Promise.resolve(index));
+            .then(resolve, reject)
+            .then(() => Promise.resolve(index));
         })
-    );
-  };
+      );
+    });
+  }
 }
 
 function throttled(length) {
